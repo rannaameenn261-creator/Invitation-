@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>دعوة زفاف | عمر & ليلى</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Amiri:wght@400;700&display=swap');
+:root{--wine:#783f50;--gold:#c5a36b;--cream:#fffaf4}
+*{box-sizing:border-box}body{margin:0;background:#f5eee7;color:#49343a;font-family:Cairo, sans-serif}
+.cover{min-height:100svh;display:grid;place-items:center;padding:24px;background:radial-gradient(circle at 50% 25%,#fff9f0,#eadbd0)}
+.envelope-wrap{width:min(420px,92vw);text-align:center}
+.hint{color:#765b60;margin:0 0 18px}
+.envelope{position:relative;width:100%;height:260px;border:0;background:transparent;cursor:pointer;perspective:900px;filter:drop-shadow(0 18px 20px #6b4b4b25)}
+.env-back{position:absolute;inset:0;background:#d9bfae;border-radius:8px}
+.env-front{position:absolute;inset:0;background:#ead4c4;clip-path:polygon(0 0,50% 58%,100% 0,100% 100%,0 100%);border-radius:8px}
+.flap{position:absolute;inset:0;background:#cda995;clip-path:polygon(0 0,100% 0,50% 62%);transform-origin:top;transition:transform .9s ease;z-index:4}
+.seal{position:absolute;z-index:5;left:50%;top:54%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:var(--wine);color:#fff;display:grid;place-items:center;font-family:Amiri;font-size:24px;border:2px solid #e5cba1;transition:opacity .3s}
+.paper{position:absolute;z-index:2;left:7%;width:86%;height:86%;top:7%;background:#fffaf4;border:1px solid #e8d8c8;display:grid;place-items:center;transition:transform .9s ease;box-shadow:0 2px 12px #7d5b4b18}
+.paper b{font-family:Amiri;font-size:29px;color:var(--wine)}
+.envelope.open .flap{transform:rotateX(180deg);z-index:1}
+.envelope.open .paper{transform:translateY(-115px);transition-delay:.25s}
+.envelope.open .seal{opacity:0}
+#invitation{display:none;padding:40px 18px 70px;background:var(--cream)}
+#invitation.show{display:block;animation:fade .8s}
+@keyframes fade{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:none}}
+.card{max-width:850px;margin:auto;text-align:center;background:#fff;border:1px solid #eadfce;padding:clamp(24px,6vw,60px);box-shadow:0 15px 45px #6b4b4b12}
+.kicker{letter-spacing:3px;color:var(--gold);font-size:13px}
+h1{font: bold clamp(42px,8vw,70px) Amiri,serif;color:var(--wine);margin:8px 0}
+.names{font:32px Amiri;color:var(--wine);margin:12px}
+p{line-height:2}
+.details{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:30px 0}
+.detail{padding:18px;background:#fbf6ef;border:1px solid #eee2d4}
+.detail strong{display:block;color:var(--wine);margin-bottom:7px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-top:22px}
+.gallery img{width:100%;height:260px;object-fit:cover;background:#f2e9df;border:5px solid white;box-shadow:0 4px 16px #00000012}
+.gallery img:nth-child(even){transform:translateY(12px)}
+footer{margin-top:38px;color:#987d79;font-size:14px}
+button.music{border:1px solid var(--gold);background:#fffaf4;color:var(--wine);border-radius:30px;padding:10px 18px;cursor:pointer}
+@media(max-width:500px){.envelope{height:220px}.gallery img{height:220px}}
+</style>
+</head>
+<body>
+<main>
+<section class="cover" id="cover">
+ <div class="envelope-wrap">
+  <p class="hint">لديكِ دعوة خاصة… اضغطي على الظرف لفتحه ♡</p>
+  <button class="envelope" id="envelope" aria-label="افتحي دعوة الزفاف">
+   <div class="env-back"></div><div class="paper"><div><small>بكل الحب ندعوكم لحضور زفافنا</small><br><b>عمر & ليلى</b></div></div>
+   <div class="flap"></div><div class="env-front"></div><div class="seal">♥</div>
+  </button>
+  <p style="font-size:13px;color:#8b6f70">اضغطي هنا لبدء الموسيقى وفتح الدعوة</p>
+ </div>
+</section>
+<section id="invitation">
+ <div class="card">
+  <div class="kicker">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيم</div>
+  <p>بفرحةٍ تملأ قلوبنا، يسعدنا دعوتكم لمشاركتنا أجمل أيام العمر</p>
+  <h1>عمر & ليلى</h1><div class="names">دعوة زفاف</div>
+  <p>وجودكم بيننا يكمّل فرحتنا، وبحضوركم تحلو ليلتنا</p>
+  <div class="details">
+   <div class="detail"><strong>اليوم والتاريخ</strong>الجمعة، 20 نوفمبر 2026</div>
+   <div class="detail"><strong>موعد الحفل</strong>الساعة 8:00 مساءً</div>
+   <div class="detail"><strong>المكان</strong>قاعة ليالي القمر – شبين الكوم</div>
+   <div class="detail"><strong>الدعوة</strong>العائلة والأصدقاء</div>
+  </div>
+  <p>نتشرّف بحضوركم ومشاركتكم فرحتنا ♡</p>
+  <button class="music" id="musicBtn">♫ إيقاف الموسيقى</button>
+  <h2 style="font:30px Amiri;color:var(--wine);margin-top:42px">لحظات من حكايتنا</h2>
+  <p style="font-size:13px;color:#967d79">يمكنك إضافة صور كثيرة داخل مجلد assets/photos وتعديل أسماءها في الملف.</p>
+  <div class="gallery" id="gallery">
+   <img src="assets/photos/photo1.jpg" alt="صورتنا 1"><img src="assets/photos/photo2.jpg" alt="صورتنا 2">
+   <img src="assets/photos/photo3.jpg" alt="صورتنا 3"><img src="assets/photos/photo4.jpg" alt="صورتنا 4">
+  </div>
+  <footer>ننتظركم بكل الحب — عمر وليلى</footer>
+ </div>
+</section>
+<audio id="song" src="assets/song.mp3" preload="auto" loop></audio>
+</main>
+<script>
+const env=document.getElementById('envelope'), cover=document.getElementById('cover'), invite=document.getElementById('invitation'), song=document.getElementById('song'), musicBtn=document.getElementById('musicBtn');
+let opened=false;
+env.addEventListener('click',async()=>{
+ if(opened)return; opened=true; env.classList.add('open');
+ try{await song.play();}catch(e){musicBtn.textContent='♫ تشغيل الموسيقى';}
+ setTimeout(()=>{cover.style.display='none';invite.classList.add('show');},1100);
+});
+musicBtn.addEventListener('click',async()=>{if(song.paused){try{await song.play();musicBtn.textContent='♫ إيقاف الموسيقى';}catch(e){}}else{song.pause();musicBtn.textContent='♫ تشغيل الموسيقى';}});
+</script>
+</body></html>
